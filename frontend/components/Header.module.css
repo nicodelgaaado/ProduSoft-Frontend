@@ -1,0 +1,165 @@
+.accountSwitcher {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.accountButton {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--cds-spacing-02, 0.5rem);
+  border: none;
+  background: transparent;
+  color: var(--cds-text-on-color, #ffffff);
+  font-weight: 600;
+  cursor: pointer;
+  padding: var(--cds-spacing-02, 0.5rem) var(--cds-spacing-03, 0.75rem);
+  border-radius: var(--cds-corner-radius-200, 0.25rem);
+}
+
+.accountButton:hover,
+.accountButton:focus-visible {
+  background: rgba(255, 255, 255, 0.12);
+  outline: none;
+}
+
+.accountName {
+  font-weight: 600;
+}
+
+.accountMenu {
+  position: absolute;
+  top: calc(100% + var(--cds-spacing-02, 0.5rem));
+  right: 0;
+  min-width: 18rem;
+  background: var(--cds-layer-01, #393939);
+  color: var(--cds-text-primary, #f4f4f4);
+  border-radius: var(--cds-corner-radius-200, 0.25rem);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.32);
+  padding: var(--cds-spacing-04, 1rem);
+  z-index: 999;
+}
+
+.menuHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--cds-spacing-03, 0.75rem);
+}
+
+.menuTitle {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: rgba(244, 244, 244, 0.75);
+}
+
+.accountList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.accountList li + li {
+  margin-top: var(--cds-spacing-03, 0.75rem);
+}
+
+.accountEntry {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--cds-spacing-01, 0.25rem);
+  padding: var(--cds-spacing-03, 0.75rem);
+  border: none;
+  background: transparent;
+  color: inherit;
+  border-radius: var(--cds-corner-radius-200, 0.25rem);
+  cursor: pointer;
+  text-align: left;
+  font-weight: 600;
+}
+
+.accountEntry:disabled {
+  cursor: default;
+  opacity: 0.7;
+}
+
+.accountEntry:not(:disabled):hover,
+.accountEntry:not(:disabled):focus-visible {
+  background: rgba(255, 255, 255, 0.12);
+  outline: none;
+}
+
+.entryName {
+  font-weight: 600;
+}
+
+.entryRoles {
+  font-size: 0.75rem;
+  opacity: 0.85;
+  text-transform: capitalize;
+}
+
+.activeAccount .accountEntry {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.activeBadge {
+  margin-top: var(--cds-spacing-01, 0.25rem);
+  padding: 0.125rem 0.5rem;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  background: rgba(0, 0, 0, 0.45);
+  color: var(--cds-text-on-color, #ffffff);
+}
+
+.signOutEntry {
+  margin-top: var(--cds-spacing-02, 0.5rem);
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--cds-spacing-02, 0.5rem);
+  border: none;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  padding: var(--cds-spacing-02, 0.5rem) var(--cds-spacing-03, 0.75rem);
+  border-radius: var(--cds-corner-radius-200, 0.25rem);
+  font-weight: 500;
+}
+
+.signOutEntry:hover,
+.signOutEntry:focus-visible {
+  background: rgba(255, 255, 255, 0.12);
+  outline: none;
+}
+
+.menuActions {
+  margin-top: var(--cds-spacing-04, 1rem);
+  display: flex;
+  flex-direction: column;
+  gap: var(--cds-spacing-02, 0.5rem);
+}
+
+.menuAction {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--cds-spacing-02, 0.5rem);
+  border: none;
+  background: rgba(255, 255, 255, 0.08);
+  color: inherit;
+  cursor: pointer;
+  padding: var(--cds-spacing-02, 0.5rem) var(--cds-spacing-03, 0.75rem);
+  border-radius: var(--cds-corner-radius-200, 0.25rem);
+  font-weight: 600;
+}
+
+.menuAction:hover,
+.menuAction:focus-visible {
+  background: rgba(255, 255, 255, 0.16);
+  outline: none;
+}
